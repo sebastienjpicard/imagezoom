@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ImageZoom</title>
+    <style>
+        :root { color-scheme: light dark; }
+        body { width: 300px; margin: 12px; font: 13px system-ui, sans-serif; }
+        label { display: block; margin-bottom: 10px; }
+        input[type=range] { display: block; width: 100%; margin: 4px 0 0; }
+        output { float: right; }
+    </style>
+</head>
+<body>
+    <label><input type="checkbox" id="saveZoomValues"> Whether to save zoom and lens size values</label>
+    <label><input type="checkbox" id="invertScroll"> Invert scroll</label>
+    <label><input type="checkbox" id="nearestNeighbour"> Use Nearest Neighbour Interpolation when scaling images</label>
+    <label><input type="checkbox" id="square"> Make the lens square</label>
+
+    <label>Zoom of the lens <output for="zoom"></output>
+        <input type="range" id="zoom" min="1" max="50" step="0.1">
+    </label>
+    <label>Radius / Size of the lens <output for="size"></output>
+        <input type="range" id="size" min="50" max="1000" step="1">
+    </label>
+    <label>How fast the zoom / lens size changes <output for="zoomSpeed"></output>
+        <input type="range" id="zoomSpeed" min="0.1" max="5" step="0.1">
+    </label>
+    <label>Hold time before the lens appears <output for="delay"></output>
+        <input type="range" id="delay" min="0" max="1000" step="10">
+    </label>
+
+    <script src="settings.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>

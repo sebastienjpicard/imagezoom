@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "ImageZoom",
+    "version": "1.0.0",
+    "description": "Zoom in to images and gifs. Use scroll wheel to zoom in and shift + scroll wheel to increase lens radius / size",
+    "permissions": ["storage"],
+    "icons": {
+        "48": "icons/magnifier-48.png"
+    },
+    "action": {
+        "default_icon": {
+            "48": "icons/magnifier-48.png"
+        },
+        "default_title": "ImageZoom",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["settings.js", "content.js"],
+            "run_at": "document_start",
+            "all_frames": true,
+            "match_origin_as_fallback": true
+        }
+    ]
+}

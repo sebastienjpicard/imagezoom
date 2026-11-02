@@ -1,0 +1,15 @@
+imagezoom: Vencord's ImageZoom globally
+=======================================
+
+Usage: hold left click on an image, scroll to zoom, shift + scroll to resize the lens.
+
+Install: Open chrome://extensions in Developer mode, load unpacked and select this directory.
+
+Copyright (c) 2023 Vendicated and contributors. GPL-3.0-or-later, no warranty, see LICENSE.
+Modified 2026-10-30: ported to a standalone MV3 browser extension, removing Discord-specific code and React.
+Upstream: https://github.com/Vendicated/Vencord/tree/main/src/plugins/imageZoom
+
+Icon: Silk by Mark James, https://github.com/markjames/famfamfam-silk-icons
+CC BY 2.5, https://creativecommons.org/licenses/by/2.5/.
+
+Tested on Chromium only.
